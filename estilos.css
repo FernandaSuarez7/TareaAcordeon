@@ -1,0 +1,168 @@
+:root {
+    --c-icono: #3454ff;
+    --c-blanco: #ffffff;
+    --c-texto: #111827;
+    --c-subtexto: #6b7280;
+    --c-borde: #f1f1f1;
+
+    --c-barra1: #3950ff;
+    --c-barra2: #f2c94c;
+    --c-barra3: #ff3b7f;
+    --c-barra4: #27ae60;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background: var(--c-blanco);
+    color: var(--c-texto);
+    font-size: 16px;
+}
+
+.ancho-maximo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.seccion-acordion {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.bloque-preguntas {
+    flex: 1.2;
+}
+
+.bloque-preguntas h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.caja-acordion {
+    border-top: 1px solid var(--c-borde);
+    border-bottom: 1px solid var(--c-borde);
+}
+
+.encabezado-pregunta {
+    padding: 18px 0;
+    border-top: 1px solid var(--c-borde);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.fila-pregunta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.caja-icono {
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    background: var(--c-icono);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--c-blanco);
+    font-size: 14px;
+}
+
+.encabezado-pregunta h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #111827;
+    transition: color 0.5s ease;
+}
+
+.encabezado-pregunta.activo h3 {
+    color: #3454ff;
+}
+
+.texto-respuesta {
+    display: none;
+    padding: 0 0 18px 42px;
+}
+
+.texto-respuesta p {
+    font-size: 15px;
+    color: var(--c-subtexto);
+}
+
+.texto-respuesta.activo {
+    display: block;
+}
+
+.bloque-habilidades {
+    flex: 0.9;
+    padding-bottom: 40px;
+}
+
+.bloque-habilidades h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 36px;
+}
+
+.fila-habilidad {
+    margin-bottom: 40px;
+}
+
+.fila-habilidad:last-child {
+    margin-bottom: 0;
+}
+
+.encabezado-habilidad {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.encabezado-habilidad span:last-child {
+    color: var(--c-subtexto);
+}
+
+.barra-fondo {
+    width: 100%;
+    height: 3px;
+    background: #f3f4f6;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.barra-progreso {
+    height: 100%;
+    border-radius: 50px;
+}
+
+.barra-progreso.nivel-marca {
+    width: 90%;
+    background: var(--c-barra1);
+}
+
+.barra-progreso.nivel-web {
+    width: 65%;
+    background: var(--c-barra2);
+}
+
+.barra-progreso.nivel-texto {
+    width: 100%;
+    background: var(--c-barra3);
+}
+
+.barra-progreso.nivel-video {
+    width: 75%;
+    background: var(--c-barra4);
+}
